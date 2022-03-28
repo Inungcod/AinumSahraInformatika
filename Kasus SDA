@@ -1,0 +1,74 @@
+barang = []
+user = 0
+while user != 7 :
+  print('''
+  1. menambahkan
+  2. menghapus
+  3. mengedit
+  4. menampilkan
+  5. mencari barang
+  6. mencari index
+  7. keluar
+  ''')
+
+  user = int(input("masukkan operator anda : "))
+
+  if user == 1 :
+    while True :
+      elemen = input("masukkanbarang")
+      barang.append(elemen)
+      print("barang sekarang :", barang)
+
+      stop = input("ketik ya untuk berhenti :")
+      if stop == "ya" :
+        break
+
+  elif user == 2 :
+    while True :
+      elemen = int(input("masukkan index yang akandi hapus :"))
+
+      if elemen >= len(barang) :
+        print("index yang akan di temukan")
+      else :
+        print(barang.pop(elemen))
+
+        print("barang sekarang :",barang)
+        stop = input("ketik ya untuk berhenti")
+        if stop == "ya" :
+          break
+
+  elif user == 3 :
+    while True :
+      e = int(input("masukkan index yang akan diganti :"))
+
+      if e > len(barang) :
+        print("index tidak ditemukan")
+      else :
+        barang[e] = input("masukkan barang pengganti :")
+        
+        print("barang sekarang :", barang)
+        stop = input("ketik ya untuk berhenti")
+        if stop == "ya" :
+          break
+
+  elif user == 4 :
+    for i in range(len(barang)) :
+      print("barang sekarang", barang[i])
+
+  elif user == 5 :
+    cari = input("masukkan barang yang dicari :")
+
+    if cari in barang :
+      print("barang ditemukan")   
+    else :
+      print("barang tidak ditemukan")
+
+  elif user == 6 :
+    cari1 = input("masukkan barang yang dicari :")
+    if cari in barang :
+      print("{cari}ditemukan pada index ke- {barang.index(cari1)}")
+
+    else :
+      print("barang tidak ditemukan")
+  elif user > 7 :
+    print("periksa kembai inputan anda :")
