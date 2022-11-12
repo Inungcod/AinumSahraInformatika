@@ -1,0 +1,40 @@
+package com.mycompany.ainumsahra;
+
+import java.util.Scanner;
+
+public class AinumSahra {
+
+    public static void main(String[] args) {
+        //Kalkulator mengoperasikan 2 bilangan
+        
+        System.out.println("pilih operator anda");
+        System.out.println("1. penjumlahan");
+        System.out.println("2. pengurangan");
+        System.out.println("3. perkalian");
+        System.out.println("1. pembagian");
+        
+        Scanner input = new Scanner(System.in);
+        System.out.println("Masukan pilihan anda : ");
+        int pilihan = input.nextInt();
+        
+        System.out.println();
+        System.out.println("masukan nilai 1 : ");
+        int nilai1 = input.nextInt();
+        System.out.println("masukan nilai 2 : ");
+        int nilai2 = input.nextInt();
+        
+        if (pilihan == 1){
+            int hasil = nilai1 + nilai2;
+            System.out.println("Hasil operasi penjumlahan nilai : "+hasil);
+        }else if (pilihan == 2){
+            int hasil = nilai1 - nilai2;
+            System.out.println("Hasil operasi pengurangan nilai : "+hasil);
+        }else if (pilihan == 3){
+            int hasil = nilai1 * nilai2;
+            System.out.println("Hasil operasi perkalian nilai : "+hasil);
+        }else if (pilihan == 4){
+            int hasil = nilai1 / nilai2;
+            System.out.println("Hasil operasi pembagian nilai : "+hasil);
+        }
+    }
+}
